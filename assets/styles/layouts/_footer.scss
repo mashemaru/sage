@@ -1,0 +1,11 @@
+.footer {
+	background: $footer-bg;
+
+	.widget {
+		@include span-columns(3);
+	}
+
+	.footer-wrapper {
+		padding: 1em 0;
+	}
+}

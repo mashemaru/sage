@@ -1,9 +1,31 @@
-@import "common/variables";
-
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
-@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "../../node_modules/normalize.css/normalize";
+/*--------------------------------------------------------------
+# Bourbon
+--------------------------------------------------------------*/
+@import "bourbon";
+/*--------------------------------------------------------------
+# Bitters
+--------------------------------------------------------------*/
+//@import "../../bower_components/bitters/app/assets/stylesheets/base";
+@import "../../node_modules/Bitters/app/assets/stylesheets/base";
+@import "common/variables";
+
+/*--------------------------------------------------------------
+# Grid-Settings override
+--------------------------------------------------------------*/
+@import "grid-settings";
+/*--------------------------------------------------------------
+# Neat
+--------------------------------------------------------------*/
+@import "neat";
+
 
 @import "common/global";
 @import "components/buttons";

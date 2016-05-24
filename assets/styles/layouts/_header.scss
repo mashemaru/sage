@@ -1,0 +1,84 @@
+.navigation-header {
+  background: $nav-bg;
+  text-align: justify;
+  height: 5.2em;
+  padding: 1em 8%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+
+  @include media($grid-padding) {
+    @include padding(0 $mobile-padding);
+  }
+
+  // Mobile view
+  .navigation-menu-button {
+    display: inline-block;
+
+    @include media ($medium-screen) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+
+  > div,
+  > div::before,
+  nav,
+  > div img {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+  }
+
+  > div {
+    height: 100%;
+  }
+
+  > div::before {
+    content: '';
+    height: 100%;
+  }
+
+  li {
+    display: inline;
+    
+    &:last-child a {
+      padding-right: 0;
+    }
+  }
+
+  li a {
+    color: $nav-color;
+    padding: 0 1em;
+    white-space: nowrap;
+
+    &:hover {
+      color: shade($nav-color,15%);
+    }
+  }
+
+  img {
+    width: 100px;
+  }
+
+  // li a:last-child {
+  //   padding-right: 0;
+  // }
+
+  // @media screen and (max-width: 720px){
+  //   height: auto;
+
+  //   > div,
+  //   > div h1,
+  //   nav {
+  //     height: auto;
+  //     width: auto;
+  //     display: block;
+  //     text-align: center;
+  //   }
+  // }
+
+}

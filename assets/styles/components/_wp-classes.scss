@@ -10,36 +10,49 @@
 }
 .aligncenter {
   display: block;
-  margin: ($line-height-computed / 2) auto;
+  margin: $small-spacing auto;
   height: auto;
 }
 .alignleft,
 .alignright {
-  margin-bottom: ($line-height-computed / 2);
+  margin-bottom: $small-spacing;
   height: auto;
 }
-@media (min-width: $screen-sm-min) {
+@include media($small-screen) {
   // Only float if not on an extra small device
   .alignleft {
     float: left;
-    margin-right: ($line-height-computed / 2);
+    margin-right: $small-spacing;
   }
   .alignright {
     float: right;
-    margin-left: ($line-height-computed / 2);
+    margin-left: $small-spacing;
   }
 }
 
 // Captions
 .wp-caption {
-  @extend .thumbnail;
+  // @extend .thumbnail;
 }
 .wp-caption-text {
-  padding: $thumbnail-caption-padding;
+  // padding: $thumbnail-caption-padding;
 }
 
 // Text meant only for screen readers
 .screen-reader-text {
-  @extend .sr-only;
-  @extend .sr-only-focusable;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+
+    &:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      clip: auto;
+      z-index: 100000; /* Above WP toolbar. */
+    }
 }

@@ -1,19 +1,138 @@
+.comments {
+	margin-top: 2em;
+	//background: #f1f5f8;
+  	h2:first-child {
+  		margin: 0;
+  	}
+  	article {
+    	padding: .8em;
+    }
+	.avatar {
+      float: left;
+  		border-radius: 50%;
+	    vertical-align: middle;
+	    margin-right: 0.5em;
+  	}
+  	.comment {
+  		margin-top: 1em;
+  	}
+  	.children {
+  		//margin-bottom: 1em;
+  		// article {
+  		// 	padding: .8em 0.3em .8em .8em;
+  		// }
+  		li {
+	  		margin: 0 1.5em 1em;
+	  		@include media($small-screen) {
+				margin: 0 1em 1em;
+		    }
+	  	}
+  	}
+  	
+	// .children {
+	// 	@include media($medium-screen) {
+	// 		margin: 0 em(13) 0 em(30);
+	// 	}
+ //  	}
+  	.depth-1 {
+  		//margin: 1em 0;
+	    border: 1px solid #f4f4f4;
+	    border-radius: 4px;
+	    box-shadow: 0 0 7px rgba(0,0,0,.1);
+    	
+        .children {
+        	//margin-bottom: 1em;
+    	    //padding-bottom: .8em;
+        }
+     //    li:last-child {
+	    // 	margin-bottom: 1em;
+	    // }
+  	}
+  	.depth-2 {
+  		background: #f1f5f8;
+	    //padding: 1em;
+	    border-radius: em(5);
+	    //margin: 1em 1em 0;
+	    @include media($small-screen) {
+			//margin: 1em .5em 0;
+	    }
+	    .children {
+			padding-bottom: .4em;
+	    }
+  	}
+  	.depth-3 {
+	    border: 3px rgba(165, 175, 192, .2) dashed;
+        border-radius: 5px;
+
+        .children {
+	    	padding-bottom: 0;
+        	@include media($small-screen) {
+				//margin: 0 em(13) 0 em(18);
+			}
+        }
+        article {
+        	//padding: .8em;
+        }
+        li {
+        	//margin: 0 2em;
+        	@include media($small-screen) {
+				//margin: 0 1.4em;
+			}
+        }
+  	}
+}
 .comment-list {
-  @include list-unstyled;
+	padding-bottom: 1.5em;
 }
 .comment-list ol {
   list-style: none;
 }
 .comment-form p {
-  @extend .form-group;
+  // @extend .form-group;
 }
 .comment-form input[type="text"],
 .comment-form input[type="email"],
 .comment-form input[type="url"],
 .comment-form textarea {
-  @extend .form-control;
+  // @extend .form-control;
 }
 .comment-form input[type="submit"] {
-  @extend .btn;
-  @extend .btn-primary;
+  // @extend .btn;
+  // @extend .btn-primary;
+}
+.says {
+	display: none;
+}
+.reply {
+  display: inline-block;
+  float: right;
+  margin-top: .68em;
+}
+.comment-author {
+  @include clearfix;
+  margin-bottom: 1em;
+}
+.comment-metadata {
+  display: inline-block;
+  float: left;
+  margin-top: .2em;
+}
+.comment-reply-link {
+  @extend #{$all-buttons};
+  @extend %comment-var;
+}
+.commenter {
+  font-weight: bold;
+  float: left;
+}
+.comment-time {
+  @extend %comment-var;
+  float: left;
+  clear: both;
+}
+
+%comment-var {
+  font-size: 0.7em;
+  font-weight: bold;
+  text-transform: uppercase;
 }

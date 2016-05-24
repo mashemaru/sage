@@ -2,6 +2,7 @@
   "dependencies": {
     "main.js": {
       "files": [
+        "scripts/app.js",
         "scripts/main.js"
       ],
       "main": true
@@ -22,6 +23,6 @@
     }
   },
   "config": {
-    "devUrl": "http://example.dev"
+    "devUrl": "http://localhost:8080/wordpress/"
   }
 }

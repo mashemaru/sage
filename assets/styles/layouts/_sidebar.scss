@@ -1,0 +1,38 @@
+.sidebar-wrapper {
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	@include media($small-screen) {
+		@include span-columns(4);
+		margin-top: 1em;
+		//@include padding($mobile-padding);
+	}
+	@include media($medium-screen) {
+		@include span-columns(3);
+	}
+	@include media($large-screen) {
+		@include span-columns(3);
+	}
+	// @include media($grid-padding) {//1225px
+	// 	padding-right: $mobile-padding;
+	// }
+}
+.sidebar {
+	border-radius: $small-spacing / 2.5;
+	//padding: 1em;
+	@include padding($mobile-padding);
+
+	@include background($bg-color);
+	
+	@include media($grid-padding) {//1225px
+		@include padding($mobile-padding);
+	}
+
+	.widget {
+	    &:not(:last-child) {
+	    	padding-bottom: 1em;
+		}
+	}
+	// @include media($grid-padding) {//1225px
+	// 	@include padding(0 $mobile-padding);
+	// }
+  // @include make-sm-column($sidebar-sm-columns);
+}
