@@ -90,6 +90,7 @@ From the command line:
 1. Install [gulp](http://gulpjs.com) and [Bower](http://bower.io/) globally with `npm install -g gulp bower`
 2. Navigate to the theme directory, then run `npm install`
 3. Run `bower install`
+4. Run `npm install git://github.com/thoughtbot/bitters.git#95cd30aa56ffd75f3cee9966df08f0f0c896498c`
 
 You now have all the necessary dependencies to run the build process.
 

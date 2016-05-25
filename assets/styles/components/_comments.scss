@@ -8,7 +8,7 @@
     	padding: .8em;
     }
 	.avatar {
-      float: left;
+      display: inline-block;
   		border-radius: 50%;
 	    vertical-align: middle;
 	    margin-right: 0.5em;
@@ -114,7 +114,7 @@
 }
 .comment-metadata {
   display: inline-block;
-  float: left;
+  vertical-align: middle;
   margin-top: .2em;
 }
 .comment-reply-link {
@@ -122,12 +122,12 @@
   @extend %comment-var;
 }
 .commenter {
+  display: block;
   font-weight: bold;
-  float: left;
 }
 .comment-time {
   @extend %comment-var;
-  float: left;
+  display: block;
   clear: both;
 }
 
